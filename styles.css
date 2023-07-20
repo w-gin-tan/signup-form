@@ -108,6 +108,10 @@
    line-height: 20px;
 }
 
+.form-bg > div > label::after {
+   content: "*";
+}
+
 .form-bg > div > input {
    appearance: none;
    -webkit-appearance: none;
