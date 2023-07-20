@@ -4,7 +4,10 @@
 }
 
 :root {
-   --bg-left-color: #FFFFFF;
+   --white-color: #FFFFFF;
+   --green-color: #596D48;
+   --bold-font: 700;
+   --container-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -22,39 +25,40 @@
 .bg-left {
    background-image: url(media/roan-lavery-unsplash.jpg);
    background-size: 100% 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
-.bg-left img {
+.bg-left .title img {
    width: 6rem;
    height: 8rem; 
 }
 
 .title {
    background: rgba(0, 0, 0, 0.4);
-   margin-top: 8em;
+   margin-top: 12.5em;
    padding: 1em 0 1em 0;
 }
 
-/* odin title can be a bit further down */
 .odin {
    display: flex;
    justify-content: center;
    align-items: center;
    font-family: norse-bold, sans-serif;
    font-size: 90px;
-   color: var(--bg-left-color);
+   color: var(--white-color);
 }
 
 .credit {
-   color: var(--bg-left-color);
-   display: flex;
-   justify-content: center;
-   margin-top: 68vh;
+   text-align: center;
+   margin-bottom: 1rem;
+   color: var(--white-color);
 }
 
 .credit a {
    text-decoration: underline;
-   color: var(--bg-left-color)
+   color: var(--white-color)
 }
 
 .bg-right {
@@ -64,17 +68,17 @@
 }
 
 .description h2:first-child {
-   padding-right: 100px;
+   padding-right: 40%;
    margin-bottom: 20px;
 }
 
 .description h2:last-child {
-   margin-bottom: 40px;
+   margin-bottom: 80px;
 }
 
 .form-bg {
-   background-color: var(--bg-left-color);
-   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+   background-color: var(--white-color);
+   box-shadow: var(--container-shadow);
    gap: 10px;
    padding-top: 20px;
    padding-bottom: 20px;
@@ -95,23 +99,52 @@
    padding-right: 5vw;
    padding-bottom: 1rem;
    font-size: 12px;
-   font-weight: 700;
+   font-weight: var(--bold-font);
    color: rgba(0, 0, 0, 0.7);
    letter-spacing: 1px;
+}
+
+.form-bg > div > label {
+   line-height: 20px;
 }
 
 .form-bg > div > input {
    appearance: none;
    -webkit-appearance: none;
    -moz-appearance: none;
-   height: 3vh;
+   height: 32px;
    border-radius: 5px;
-   border: solid 1px #E5E7EB;
-   
+   border: 1px solid #E5E7EB;
 }
-
-
 
 .left {
    padding-left: 3vw;
+}
+
+.submit {
+   margin: 30px 0;
+}
+
+.submit button {
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background-color: var(--green-color);
+   border: 2px solid var(--green-color);
+   border-radius: 10px;
+   padding: 15px 70px;
+   font-size: 20px;
+   font-weight: var(--bold-font);
+   color: var(--white-color);
+   box-shadow: var(--container-shadow);
+}
+
+.login > * {
+   font-size: 20px;
+   font-weight: var(--bold-font);
+}
+
+.login a {
+   text-decoration: none;
+   color: var(--green-color);
 }
