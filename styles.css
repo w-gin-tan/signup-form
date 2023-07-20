@@ -37,7 +37,7 @@
 
 .title {
    background: rgba(0, 0, 0, 0.4);
-   margin-top: 12.5em;
+   margin-top: 11.5em;
    padding: 1em 0 1em 0;
 }
 
@@ -112,9 +112,22 @@
    appearance: none;
    -webkit-appearance: none;
    -moz-appearance: none;
+   outline: none;
+   font-size: 16px;
    height: 32px;
+   padding: 0 10px;
    border-radius: 5px;
    border: 1px solid #E5E7EB;
+}
+
+.form-bg > div > input:focus,
+.form-bg > div > input:hover {
+   box-shadow: var(--container-shadow);
+}
+
+.form-bg > div > input:focus,
+.form-bg > div > input:hover {
+   border: 1px solid blue;
 }
 
 .left {
